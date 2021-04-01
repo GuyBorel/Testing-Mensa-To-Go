@@ -1,0 +1,22 @@
+de/uniwue/jpp/testing/interfaces/createDish.java
+ de.uniwue.jpp.testing.interfaces.createDish
+de/uniwue/jpp/testing/enums/DiscountFactorProvider.java
+ de.uniwue.jpp.testing.enums.DiscountFactorProvider
+de/uniwue/jpp/testing/interfaces/Guest.java
+ de.uniwue.jpp.testing.interfaces.Guest
+de/uniwue/jpp/testing/interfaces/Dish.java
+ de.uniwue.jpp.testing.interfaces.Dish
+de/uniwue/jpp/testing/interfaces/createOrder.java
+ de.uniwue.jpp.testing.interfaces.createOrder
+de/uniwue/jpp/testing/enums/DishType.java
+ de.uniwue.jpp.testing.enums.DishType
+de/uniwue/jpp/testing/enums/GuestType.java
+ de.uniwue.jpp.testing.enums.GuestType
+de/uniwue/jpp/testing/interfaces/createGuest.java
+ de.uniwue.jpp.testing.interfaces.createGuest
+de/uniwue/jpp/testing/interfaces/Order.java
+ de.uniwue.jpp.testing.interfaces.Order
+de/uniwue/jpp/testing/interfaces/CreateSimpleDayManager.java
+ de.uniwue.jpp.testing.interfaces.CreateSimpleDayManager
+de/uniwue/jpp/testing/interfaces/DayManager.java
+ de.uniwue.jpp.testing.interfaces.DayManager

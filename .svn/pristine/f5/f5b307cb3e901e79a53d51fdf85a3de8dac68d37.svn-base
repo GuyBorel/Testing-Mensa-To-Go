@@ -1,0 +1,20 @@
+package de.uniwue.jpp.testing.interfaces;
+
+import java.util.List;
+
+public class createOrder implements Order{
+    @Override
+    public double calculatePrice() {
+        return 0;
+    }
+
+    @Override
+    public List <Dish> getDishes() {
+        return null;
+    }
+
+    @Override
+    public Guest getGuest() {
+        return null;
+    }
+}

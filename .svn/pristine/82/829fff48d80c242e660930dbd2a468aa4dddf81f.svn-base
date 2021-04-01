@@ -1,0 +1,31 @@
+package de.uniwue.jpp.testing.interfaces;
+
+import java.util.Collection;
+import java.util.Optional;
+
+public class CreateSimpleDayManager implements DayManager{
+    @Override
+    public Optional <Integer> addOrder(Order order, int preferredSlot) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional <Integer> addOrder(Order order) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Collection <Order> getOrdersForSlot(int slot) {
+        return null;
+    }
+
+    @Override
+    public Collection <Order> getAllOrders() {
+        return null;
+    }
+
+    @Override
+    public double calculateEarnings() {
+        return 0;
+    }
+}

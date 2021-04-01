@@ -1,0 +1,49 @@
+package de.uniwue.jpp.testing.util;
+
+import de.uniwue.jpp.testing.enums.DishType;
+import de.uniwue.jpp.testing.enums.GuestType;
+import de.uniwue.jpp.testing.interfaces.Dish;
+import de.uniwue.jpp.testing.interfaces.Guest;
+import de.uniwue.jpp.testing.interfaces.Order;
+
+import java.util.*;
+
+public class DataGenerator {
+
+    public static List<String> createGuestNames(int amount){
+        throw new UnsupportedOperationException();
+    }
+
+    public static List<GuestType> createGuestTypes(int staff, int student, int guest){
+        throw new UnsupportedOperationException();
+    }
+
+    public static List<String> createDishNames(int amount){
+        throw new UnsupportedOperationException();
+    }
+
+    public static List<Double> createBasePrices(int amount){
+        throw new UnsupportedOperationException();
+    }
+
+    public static List<DishType> createDishTypes(int main, int starter, int dessert, int other){
+        throw new UnsupportedOperationException();
+    }
+
+    public static List<Guest> createGuestMocks(int staff, int student, int guest){
+        throw new UnsupportedOperationException();
+    }
+
+    public static List<Dish> createDishMocks(int main, int starter, int dessert, int other){
+        throw new UnsupportedOperationException();
+    }
+
+    public static List<List<Dish>> createDishSets(int[][] data){
+        throw new UnsupportedOperationException();
+    }
+
+    public static Order createOrderMock(int index){
+        throw new UnsupportedOperationException();
+    }
+
+}

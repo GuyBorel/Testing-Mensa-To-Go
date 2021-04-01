@@ -1,0 +1,16 @@
+package de.uniwue.jpp.testing.enums;
+
+import org.junit.jupiter.api.Test;
+
+public class TestGuestType extends AbstractEnumTestClass {
+
+    @Test
+    public void testEnumValues(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testDiscountFactor(){
+        throw new UnsupportedOperationException();
+    }
+}

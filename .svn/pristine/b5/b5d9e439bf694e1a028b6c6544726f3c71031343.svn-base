@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="78d611fb-4196-40b7-ba50-73560711a8b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/de/uniwue/jpp/testing/interfaces/createOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/de/uniwue/jpp/testing/interfaces/createOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/de/uniwue/jpp/testing/TestOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/de/uniwue/jpp/testing/TestOrder.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1q2WmE1fKqENzlmfl6ubKIfm8hy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../pabs.uni-wuerzburg.de" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager" selected="Gradle.TestOrder.testEquals">
+    <configuration name="createOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.uniwue.jpp.testing.interfaces.createOrder" />
+      <module name="testing.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.uniwue.jpp.testing.interfaces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOrder.testCalculatePrice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;de.uniwue.jpp.testing.TestOrder.testCalculatePrice&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestOrder.testEquals" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;de.uniwue.jpp.testing.TestOrder.testEquals&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSimpleDayManager" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;de.uniwue.jpp.testing.TestSimpleDayManager&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSimpleDayManager.testConstructorInvalidArguments" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;de.uniwue.jpp.testing.TestSimpleDayManager.testConstructorInvalidArguments&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TestOrder.testEquals" />
+        <item itemvalue="Application.createOrder" />
+        <item itemvalue="Gradle.TestOrder.testCalculatePrice" />
+        <item itemvalue="Gradle.TestSimpleDayManager" />
+        <item itemvalue="Gradle.TestSimpleDayManager.testConstructorInvalidArguments" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\tabue\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\repos\ws20_pp\users\s367333\testing" />
+          <option name="myCopyRoot" value="C:\repos\ws20_pp\users\s367333\testing" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\repos\ws20_pp\users\s367333\testing" />
+          <option name="myCopyRoot" value="C:\repos\ws20_pp\users\s367333\testing" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78d611fb-4196-40b7-ba50-73560711a8b7" name="Default Changelist" comment="" />
+      <created>1616278325181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616278325181</updated>
+    </task>
+    <task id="LOCAL-00001">
+      <created>1616278516492</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616278516492</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test3">
+      <created>1616279807087</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616279807087</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test4">
+      <created>1616280443496</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616280443496</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test5">
+      <created>1616280997675</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616280997675</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test6">
+      <created>1616281676171</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616281676171</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test7">
+      <created>1616282140114</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616282140114</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test8">
+      <created>1616282648690</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616282648690</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test9">
+      <created>1616283094331</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616283094331</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test10">
+      <created>1616429141351</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616429141351</updated>
+    </task>
+    <task id="LOCAL-00010" summary="test11">
+      <created>1616431895057</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616431895058</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test12">
+      <created>1616433485290</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616433485290</updated>
+    </task>
+    <task id="LOCAL-00012" summary="test13">
+      <created>1616434123085</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616434123085</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test14">
+      <created>1616434497612</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616434497612</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test15">
+      <created>1616514265098</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1616514265098</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test16">
+      <created>1616516125975</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616516125976</updated>
+    </task>
+    <task id="LOCAL-00016" summary="test17">
+      <created>1616516687528</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1616516687528</updated>
+    </task>
+    <task id="LOCAL-00017" summary="test18">
+      <created>1616517057750</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616517057750</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test19">
+      <created>1616517795806</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1616517795806</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test20">
+      <created>1616518582378</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1616518582378</updated>
+    </task>
+    <task id="LOCAL-00020" summary="test21">
+      <created>1616519446193</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1616519446193</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test22">
+      <created>1616522349498</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1616522349498</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test23">
+      <created>1616525938148</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616525938148</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test24">
+      <created>1616526679472</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1616526679472</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test25">
+      <created>1616526962345</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616526962345</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test26">
+      <created>1616588199945</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1616588199945</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test27">
+      <created>1616588935876</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1616588935876</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test3" />
+    <MESSAGE value="test4" />
+    <MESSAGE value="test5" />
+    <MESSAGE value="test6" />
+    <MESSAGE value="test7" />
+    <MESSAGE value="test8" />
+    <MESSAGE value="test9" />
+    <MESSAGE value="test10" />
+    <MESSAGE value="test11" />
+    <MESSAGE value="test12" />
+    <MESSAGE value="test13" />
+    <MESSAGE value="test14" />
+    <MESSAGE value="test15" />
+    <MESSAGE value="test16" />
+    <MESSAGE value="test17" />
+    <MESSAGE value="test18" />
+    <MESSAGE value="test19" />
+    <MESSAGE value="test20" />
+    <MESSAGE value="test21" />
+    <MESSAGE value="test22" />
+    <MESSAGE value="test23" />
+    <MESSAGE value="test24" />
+    <MESSAGE value="test25" />
+    <MESSAGE value="test26" />
+    <MESSAGE value="test27" />
+    <option name="LAST_COMMIT_MESSAGE" value="test27" />
+  </component>
+</project>

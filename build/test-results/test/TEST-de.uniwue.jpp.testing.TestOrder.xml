@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.uniwue.jpp.testing.TestOrder" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-01T09:45:35" hostname="LAPTOP-RG09CHUG" time="3.042">
+  <properties/>
+  <testcase name="testCalculatePrice()" classname="de.uniwue.jpp.testing.TestOrder" time="3.042"/>
+  <system-out><![CDATA[valueEnde :4.8
+valueEnde :3.6
+valueEnde :3.6
+valueEnde :3.6
+valueEnde :6.0
+valueEnde :6.0
+valueEnde :6.0
+valueEnde :4.5
+valueEnde :7.5
+valueEnde :7.5
+valueEnde :6.0
+valueEnde :6.0
+valueEnde :4.5
+valueEnde :7.5
+valueEnde :7.5
+valueEnde :6.0
+valueEnde :6.0
+valueEnde :4.5
+valueEnde :7.5
+valueEnde :7.5
+valueEnde :4.8
+valueEnde :4.8
+valueEnde :3.6
+valueEnde :6.0
+valueEnde :6.0
+valueEnde :4.8
+valueEnde :4.8
+valueEnde :3.6
+valueEnde :6.0
+valueEnde :6.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

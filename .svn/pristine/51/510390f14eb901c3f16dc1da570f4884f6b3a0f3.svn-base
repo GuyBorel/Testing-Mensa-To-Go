@@ -1,0 +1,20 @@
+package de.uniwue.jpp.testing.interfaces;
+
+import de.uniwue.jpp.testing.enums.DishType;
+
+public class createDish implements Dish{
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public double getBasePrice() {
+        return 0;
+    }
+
+    @Override
+    public DishType getDishType() {
+        return null;
+    }
+}

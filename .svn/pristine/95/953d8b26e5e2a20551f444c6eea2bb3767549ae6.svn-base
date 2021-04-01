@@ -1,0 +1,49 @@
+package de.uniwue.jpp.testing;
+
+import de.uniwue.jpp.testing.interfaces.Order;
+import de.uniwue.jpp.testing.util.AbstractTestClass;
+import org.junit.jupiter.api.Test;
+
+public class TestOrder extends AbstractTestClass<Order> {
+
+    @Test
+    public void testConstructorValidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testConstructorInvalidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetDishes(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetGuest(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testCalculatePrice(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testEquals(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testHashCode(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testToString(){
+        throw new UnsupportedOperationException();
+    }
+
+}

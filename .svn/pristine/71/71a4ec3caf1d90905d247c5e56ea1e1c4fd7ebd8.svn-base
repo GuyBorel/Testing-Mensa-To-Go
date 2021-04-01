@@ -1,0 +1,49 @@
+package de.uniwue.jpp.testing;
+
+import de.uniwue.jpp.testing.interfaces.Dish;
+import de.uniwue.jpp.testing.util.AbstractTestClass;
+import org.junit.jupiter.api.Test;
+
+public class TestDish extends AbstractTestClass<Dish> {
+
+    @Test
+    public void testConstructorValidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testConstructorInvalidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetName(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetBasePrice(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetDishType(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testEquals(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testHashCode(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testToString(){
+        throw new UnsupportedOperationException();
+    }
+
+}

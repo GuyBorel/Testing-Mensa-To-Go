@@ -1,0 +1,15 @@
+package de.uniwue.jpp.testing.interfaces;
+
+import de.uniwue.jpp.testing.enums.GuestType;
+
+public class createGuest implements Guest{
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public GuestType getGuestType() {
+        return null;
+    }
+}

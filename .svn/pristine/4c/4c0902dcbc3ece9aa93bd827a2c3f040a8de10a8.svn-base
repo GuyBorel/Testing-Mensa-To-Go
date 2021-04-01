@@ -1,0 +1,323 @@
+package de.uniwue.jpp.testing;
+
+
+import de.uniwue.jpp.testing.interfaces.DayManager;
+import de.uniwue.jpp.testing.interfaces.Order;
+import de.uniwue.jpp.testing.util.AbstractTestClass;
+import de.uniwue.jpp.testing.util.DataGenerator;
+import de.uniwue.jpp.testing.util.TestUtils;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+
+import java.time.LocalDate;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
+
+public class TestSimpleDayManager extends AbstractTestClass <DayManager> {
+
+    @Test
+    public void testConstructorValidArguments() {
+
+        LocalDate date1 = LocalDate.of(2022, 10, 4);
+        LocalDate date2 = LocalDate.of(2022, 3, 16);
+        LocalDate date3 = LocalDate.of(2022, 4, 16);
+        LocalDate date4 = LocalDate.of(2022, 5, 16);
+        LocalDate date5 = LocalDate.of(2022, 6, 16);
+
+        try {
+            construct(date1, 3, 4);
+            construct(date2, 4, 5);
+            construct(date3, 5, 6);
+            construct(date4, 6, 7);
+            construct(date5, 7, 8);
+
+        } catch (Exception error) {
+            Assertions.fail("Testing valid arguments for DayManager constructor");
+        }
+
+    }
+
+    @Test
+    public void testConstructorInvalidArguments() {
+        LocalDate date2 = LocalDate.of(2022, 3, 16);
+        LocalDate date1 = LocalDate.of(2020, 4, 9);
+
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> construct(null, 2, 4), "Date must not be null!", "Testing invalid date argument for DayManager constructor");
+
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> construct(date1, 2, 4), "Date must not be before current date!", "Testing invalid date argument for DayManager constructor");
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> construct(date2, 0, 4), "NumberOfTimeSlots must not be zero or negative!", "Testing invalid numberOfTimeSlots argument for DayManager constructor");
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> construct(date2, -1, 4), "NumberOfTimeSlots must not be zero or negative!", "Testing invalid numberOfTimeSlots argument for DayManager constructor");
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> construct(date2, 2, 0), "CapacityPerSlot must not be zero or negative!", "Testing invalid capacityPerSlot argument for DayManager constructor");
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> construct(date2, 2, -1), "CapacityPerSlot must not be zero or negative!", "Testing invalid capacityPerSlot argument for DayManager constructor");
+
+
+    }
+
+    @Test
+    public void testAddOrderInvalidArguments() {
+
+
+        DayManager dayManager = construct(LocalDate.of(2022, 1, 2), 3, 4);
+
+
+        Order goodOrder = DataGenerator.createOrderMock(1);
+
+
+
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> dayManager.addOrder(null, 1), "Order must not be null!", "Testing invalid order argument for addOrder()");
+
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> dayManager.addOrder(null), "Order must not be null!", "Testing invalid order argument for addOrder()");
+
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> dayManager.addOrder(goodOrder, -1), "Illegal slot index!", "Testing invalid slot argument for addOrder()");
+
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> dayManager.addOrder(goodOrder, 5), "Illegal slot index!", "Testing invalid slot argument for addOrder()");
+
+        dayManager.addOrder(goodOrder);
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> dayManager.addOrder(goodOrder, 1), "Illegal order: This guest has already ordered!", "Testing invalid order argument for addOrder()");
+        TestUtils.assertThrowsWithMessage(IllegalArgumentException.class, () -> dayManager.addOrder(goodOrder), "Illegal order: This guest has already ordered!", "Testing invalid order argument for addOrder()");
+    }
+    @Test
+    private void helpMethod1(int nos, int cps) {
+        DayManager dayManager = construct(LocalDate.of(2022, 2, 3), nos, cps);
+
+        String message ="Executing addOrder sequence on a DayManager with " + nos + " time slots and " + cps + " capacity per slot:\n";
+
+
+        for(int i = 0; i < nos; i++){
+            for(int j = 0; j < cps; j++){
+                Order order = DataGenerator.createOrderMock(3);
+                Optional <Integer> pref2 = dayManager.addOrder(order, i);
+                message += "adding Order with preferred slot " + i + "\n";
+                try {
+                    Assertions.assertTrue(pref2.isPresent());
+                    Assertions.assertEquals(i, pref2.get());
+                } catch (AssertionError e){
+                    //Assertions.fail(message + "Wrong return value.");
+                    throw e;
+                }
+            }
+        }
+        System.out.println(message);
+        Optional <Integer> pref2 = dayManager.addOrder(DataGenerator.createOrderMock(3));
+        try {
+            Assertions.assertEquals(Optional.empty(), pref2);
+        } catch (AssertionError e){
+            //Assertions.fail(message + "adding Order\nWrong return value.");
+            throw e;
+        }
+    }
+    @Test
+    private void helpMethod2(int nos, int cps) {
+        DayManager dayManager = construct(LocalDate.of(2022, 2, 3), nos, cps);
+        String message ="Executing addOrder sequence on a DayManager with " + nos + " time slots and " + cps + " capacity per slot:\n";
+
+        for(int i = 0; i < nos; i++){
+            for(int j = 0; j < cps; j++){
+                Order order = DataGenerator.createOrderMock(3);
+                Optional <Integer> pref2 = dayManager.addOrder(order);
+                message += "adding Order\n";
+                try {
+                    Assertions.assertTrue(pref2.isPresent());
+                    Assertions.assertEquals(i, pref2.get());
+                } catch (AssertionError e){
+                    Assertions.fail(message + "Wrong return value.");
+                }
+            }
+        }
+        Optional <Integer> pref2 = dayManager.addOrder(DataGenerator.createOrderMock(3));
+        try {
+            Assertions.assertEquals(Optional.empty(), pref2);
+        } catch (AssertionError e){
+            Assertions.fail(message + "adding Order\nWrong return value.");
+        }
+    }
+
+    @Test
+    public void testAddOrderWithSlotArgument() {
+        //Szenario (1, 1)..................................................................................................
+        helpMethod1(1, 1);
+
+        //Szenario (1, 5)..................................................................................................
+        helpMethod1(1, 5);
+
+        //Szenario (5, 4)..................................................................................................
+        helpMethod1(5, 4);
+
+        //Szenario (3, 2)..................................................................................................
+        helpMethod1(3,2);
+    }
+
+    @Test
+    public void testAddOrderWithoutSlotArgument() {
+        //Szenario (1, 1)..................................................................................................
+        helpMethod2(1,1);
+        //Szenario (3, 2)..................................................................................................
+        helpMethod2(3,2);
+
+    }
+
+    public void testGetOrderArgument(int numberOfDimeSlots, int capacityPerSlot){
+
+        DayManager dayManager1 = construct(LocalDate.of(2022, 1, 2), numberOfDimeSlots, capacityPerSlot);
+
+
+        Order order = DataGenerator.createOrderMock(4);
+
+        Assertions.assertEquals(0, dayManager1.getAllOrders().size());
+
+        Optional <Integer> pref1 = dayManager1.addOrder(order, 1);
+
+        Assertions.assertTrue(pref1.isPresent());
+        Assertions.assertEquals(1, pref1.get());
+        Assertions.assertEquals(1, dayManager1.getAllOrders().size());
+        String ls = System.lineSeparator();
+        StringBuilder str = new StringBuilder();
+        str.append("Executing addOrder sequence on a DayManager with ").append(numberOfDimeSlots).append(" time slots and ").append(capacityPerSlot).append(" capacity per slot:");
+        str.append(ls);
+        str.append("adding Order with preferred slot ").append(pref1.get());
+        str.append(ls);
+
+        try {
+            dayManager1.addOrder(order);
+        }catch (AssertionError e){
+            Assertions.fail(str + "Wrong return value");
+        }
+
+    }
+
+    public void testGetOrder(int numberOfDimeSlots, int capacityPerSlot){
+        DayManager dayManager = construct(LocalDate.of(2022,1,2), numberOfDimeSlots, capacityPerSlot);
+
+        Order order1 = DataGenerator.createOrderMock(1);
+        Order order2 = DataGenerator.createOrderMock(2);
+        Order order3 = DataGenerator.createOrderMock(3);
+
+        Optional <Integer> pref = Optional.empty();
+
+        Assertions.assertEquals(0, dayManager.getAllOrders().size());
+
+        String ls = System.lineSeparator();
+        StringBuilder str = new StringBuilder();
+
+        for (int i = 0; i < numberOfDimeSlots; i++) {
+            switch (i){
+                case 0 -> {
+                    pref = dayManager.addOrder(order1);
+                    Assertions.assertTrue(pref.isPresent());
+                    str.append("Executing addOrder sequence on a DayManager with ").append(numberOfDimeSlots).append(" time slots and ").append(capacityPerSlot).append(" capacity per slot:");
+                    str.append(ls);
+                    str.append("adding Order ").append(pref.get());
+                    str.append(ls);
+                    Assertions.assertEquals(0, pref.get(), str + "Wrong return value");
+                }
+                case 1 ->{
+                    pref = dayManager.addOrder(order2);
+                    Assertions.assertTrue(pref.isPresent());
+                    str.append("Executing addOrder sequence on a DayManager with ").append(numberOfDimeSlots).append(" time slots and ").append(capacityPerSlot).append(" capacity per slot:");
+                    str.append(ls);
+                    str.append("adding Order ").append(pref.get());
+                    str.append(ls);
+                    Assertions.assertEquals(0, pref.get(), str + "Wrong return value");
+                }
+                case 2 ->{
+                    pref = dayManager.addOrder(order3);
+                    Assertions.assertTrue(pref.isPresent());
+                    str.append("Executing addOrder sequence on a DayManager with ").append(numberOfDimeSlots).append(" time slots and ").append(capacityPerSlot).append(" capacity per slot:");
+                    str.append(ls);
+                    str.append("adding Order ").append(pref.get());
+                    str.append(ls);
+                    Assertions.assertEquals(0, pref.get(), str + "Wrong return value");
+                }
+            }
+
+        }
+
+        Assertions.assertTrue(pref.isPresent());
+        Assertions.assertEquals(0, pref.get());
+        //Assertions.assertEquals(0, dayManager.getAllOrders().size());
+
+
+    }
+
+    @Test
+    public void testGetOrdersForSlot() {
+        DayManager dayManager = construct(LocalDate.of(2022, 1, 2), 3, 4);
+
+        Order order = DataGenerator.createOrderMock(1);
+
+        Optional <Integer> pref = dayManager.addOrder(order, 1);
+
+        Assertions.assertTrue(pref.isPresent());
+        Collection <Order> orders = dayManager.getOrdersForSlot(pref.get());
+        Assertions.assertEquals(1, orders.size());
+        Assertions.assertTrue(orders.contains(order));
+    }
+
+    @Test
+    public void testGetAllOrders() {
+        DayManager dayManager = construct(LocalDate.of(2022, 1, 2), 3, 4);
+
+        Order order1 = DataGenerator.createOrderMock(1);
+        Order order2 = DataGenerator.createOrderMock(2);
+        Order order3 = DataGenerator.createOrderMock(3);
+        Order order4 = DataGenerator.createOrderMock(4);
+        Order order5 = DataGenerator.createOrderMock(5);
+
+        Assertions.assertEquals(0, dayManager.getAllOrders().size());
+
+        dayManager.addOrder(order1);
+        dayManager.addOrder(order2);
+        dayManager.addOrder(order3);
+
+        Collection <Order> orders = dayManager.getAllOrders();
+        Assertions.assertEquals(3, orders.size());
+        Assertions.assertTrue(orders.contains(order1));
+        Assertions.assertTrue(orders.contains(order2));
+        Assertions.assertTrue(orders.contains(order3));
+    }
+
+    @Test
+    public void testCalculateEarnings() {
+        DayManager dayManager = construct(LocalDate.of(2022, 1, 2), 3, 4);
+
+        Order order1 = DataGenerator.createOrderMock(1);
+        Order order2 = DataGenerator.createOrderMock(2);
+        Order order3 = DataGenerator.createOrderMock(3);
+        Order order4 = DataGenerator.createOrderMock(4);
+        Order order5 = DataGenerator.createOrderMock(5);
+
+        Assertions.assertEquals(0.0, dayManager.calculateEarnings());
+
+        dayManager.addOrder(order1);
+        Assertions.assertEquals(0.5, dayManager.calculateEarnings());
+        dayManager.addOrder(order2);
+        Assertions.assertEquals(2.0, dayManager.calculateEarnings());
+        dayManager.addOrder(order3);
+        Assertions.assertEquals(5.0, dayManager.calculateEarnings());
+        dayManager.addOrder(order4);
+        Assertions.assertEquals(10.0, dayManager.calculateEarnings());
+        dayManager.addOrder(order5);
+
+        Assertions.assertEquals(17.5, dayManager.calculateEarnings());
+    }
+
+    @Test
+    public void testToString() {
+
+
+        DayManager dayManager1 = construct(LocalDate.of(2022, 1, 2), 3, 4);
+        DayManager dayManager2 = construct(LocalDate.of(2022, 2, 3), 4, 5);
+        DayManager dayManager3 = construct(LocalDate.of(2022, 3, 4), 5, 6);
+        DayManager dayManager4 = construct(LocalDate.of(2022, 4, 5), 6, 7);
+        DayManager dayManager5 = construct(LocalDate.of(2022, 5, 6), 7, 8);
+
+
+        Assertions.assertEquals("SimpleDayManager (02.01.22)", dayManager1.toString(), "Incorrect string representation returned by toString()");
+        Assertions.assertEquals("SimpleDayManager (03.02.22)", dayManager2.toString(), "Incorrect string representation returned by toString()");
+        Assertions.assertEquals("SimpleDayManager (04.03.22)", dayManager3.toString(), "Incorrect string representation returned by toString()");
+        Assertions.assertEquals("SimpleDayManager (05.04.22)", dayManager4.toString(), "Incorrect string representation returned by toString()");
+        Assertions.assertEquals("SimpleDayManager (06.05.22)", dayManager5.toString(), "Incorrect string representation returned by toString()");
+    }
+}

@@ -1,0 +1,9 @@
+package de.uniwue.jpp.testing.enums;
+
+public enum GuestType implements DiscountFactorProvider{
+    STUDENT, STAFF, GUEST;
+
+    public double getDiscountFactor(){
+        throw new UnsupportedOperationException();
+    }
+}

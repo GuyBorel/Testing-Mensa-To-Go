@@ -1,0 +1,53 @@
+package de.uniwue.jpp.testing;
+
+import de.uniwue.jpp.testing.interfaces.DayManager;
+import de.uniwue.jpp.testing.util.AbstractTestClass;
+import org.junit.jupiter.api.Test;
+
+public class TestSimpleDayManager extends AbstractTestClass<DayManager> {
+
+    @Test
+    public void testConstructorValidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testConstructorInvalidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testAddOrderInvalidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testAddOrderWithSlotArgument(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testAddOrderWithoutSlotArgument(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetOrdersForSlot(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetAllOrders(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testCalculateEarnings(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testToString(){
+        throw new UnsupportedOperationException();
+    }
+}

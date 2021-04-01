@@ -1,0 +1,22 @@
+de/uniwue/jpp/testing/TestDish.java
+ de.uniwue.jpp.testing.TestDish
+de/uniwue/jpp/testing/enums/TestGuestType.java
+ de.uniwue.jpp.testing.enums.TestGuestType
+de/uniwue/jpp/testing/util/TestUtils.java
+ de.uniwue.jpp.testing.util.TestUtils
+de/uniwue/jpp/testing/enums/TestDishType.java
+ de.uniwue.jpp.testing.enums.TestDishType
+de/uniwue/jpp/testing/enums/AbstractEnumTestClass.java
+ de.uniwue.jpp.testing.enums.AbstractEnumTestClass
+de/uniwue/jpp/testing/util/AbstractTestClass.java
+ de.uniwue.jpp.testing.util.AbstractTestClass
+ de.uniwue.jpp.testing.util.AbstractTestClass$MyRunnable
+de/uniwue/jpp/testing/util/DataGenerator.java
+ de.uniwue.jpp.testing.util.DataGenerator
+de/uniwue/jpp/testing/TestGuest.java
+ de.uniwue.jpp.testing.TestGuest
+de/uniwue/jpp/testing/TestSimpleDayManager.java
+ de.uniwue.jpp.testing.TestSimpleDayManager
+de/uniwue/jpp/testing/TestOrder.java
+ de.uniwue.jpp.testing.TestOrder
+ de.uniwue.jpp.testing.TestOrder$1

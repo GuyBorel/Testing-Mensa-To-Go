@@ -1,0 +1,37 @@
+plugins{
+    id 'java'
+    id 'application'
+}
+
+group 'de.uniwue.jpp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.6.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+    testImplementation("org.mockito:mockito-core:3.7.7")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}

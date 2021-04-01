@@ -1,0 +1,43 @@
+package de.uniwue.jpp.testing;
+
+import de.uniwue.jpp.testing.interfaces.Guest;
+import de.uniwue.jpp.testing.util.AbstractTestClass;
+import org.junit.jupiter.api.Test;
+
+public class TestGuest extends AbstractTestClass<Guest> {
+
+    @Test
+    public void testConstructorValidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testConstructorInvalidArguments(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetName(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testGetGuestType(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testEquals(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testHashCode(){
+        throw new UnsupportedOperationException();
+    }
+
+    @Test
+    public void testToString(){
+        throw new UnsupportedOperationException();
+    }
+}

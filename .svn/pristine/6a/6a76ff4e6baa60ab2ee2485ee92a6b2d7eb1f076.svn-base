@@ -1,0 +1,11 @@
+package de.uniwue.jpp.testing.enums;
+
+import org.junit.jupiter.api.Test;
+
+public class TestDishType extends AbstractEnumTestClass {
+
+    @Test
+    public void testEnumValues(){
+        throw new UnsupportedOperationException();
+    }
+}

@@ -1,0 +1,20 @@
+package de.uniwue.jpp.testing.util;
+
+import org.junit.jupiter.api.function.Executable;
+
+import java.util.Collection;
+
+public class TestUtils {
+
+    public static void assertThrowsWithMessage(Class<? extends Exception> expectedType, Executable executable, String exceptionMessage, String message){
+        throw new UnsupportedOperationException();
+    }
+
+    public static <T> void assertCollectionsEquals(Collection<T> expected, Collection<T> actual, String message){
+        throw new UnsupportedOperationException();
+    }
+
+    public static void assertCollectionIsUnmodifiable(Collection<?> collection, String message){
+        throw new UnsupportedOperationException();
+    }
+}
